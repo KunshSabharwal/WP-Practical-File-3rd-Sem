@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Object with Methods</title>
+</head>
+<body>
+    <h1>Person Object with Methods</h1>
+    <button id="greetButton">Greet</button>
+    <button id="showDetailsButton">Show Details</button>
+    <p id="output"></p>
+    <script>
+        const person = {
+            name: 'Kunsh',
+            age: 19,
+            occupation: 'Student',
+            greet: function() {
+                return `Hello, my name is ${this.name}!`;
+            },
+            showDetails: function() {
+                return `Name: ${this.name}, Age: ${this.age}, Occupation: ${this.occupation}`;
+            }
+        };
+        document.getElementById('greetButton').addEventListener('click', function() {
+            document.getElementById('output').textContent = person.greet();
+        });
+        document.getElementById('showDetailsButton').addEventListener('click', function() {
+            document.getElementById('output').textContent = person.showDetails();
+        });
+    </script>
+</body>
+</html>

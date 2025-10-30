@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #2e86c1;
+}
+.output {
+    margin-top: 20px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+}

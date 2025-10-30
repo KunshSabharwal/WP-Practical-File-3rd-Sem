@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Iteration Example</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 50px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1 {
+            color: #70d7f0;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #70d7f0;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #70d7f0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1.2em;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        li:nth-child(odd) {
+            background-color: #e0f1fa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number List with Loop</h1>
+    <button id="iterateButton">Show Numbers</button>
+    <ul id="numberList"></ul>
+    <script>
+        document.getElementById('iterateButton').addEventListener('click', function() {
+            document.getElementById('numberList').innerHTML = '';
+            for (let i = 1; i <= 10; i++) {
+                let listItem = document.createElement('li');
+                listItem.textContent = `Number: ${i}`;
+                document.getElementById('numberList').appendChild(listItem);
+            }
+        });
+    </script>
+</body>
+</html>
